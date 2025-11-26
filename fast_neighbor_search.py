@@ -98,4 +98,32 @@ class ILSQN():
 
         self.run()
 
-    # ... rest preserved
+    def run(self):
+        for i in range(1):
+            if self.minimizeOverlap()==True:
+                pass
+            else:
+                pass
+        
+    def minimizeOverlap(self):
+        k=0
+        while k<5:
+            initial_solution,height=self.swapTwoPolygons()
+            lopt_solution=self.separate(initial_solution)
+            pass
+    
+    def findBestPosition(self):
+        pass
+
+    def swapTwoPolygons(self):
+        i,j=random.randint(0,len(self.cur_poly_list)-1),random.randint(0,len(self.cur_poly_list)-1)
+        pass
+
+    def separate(self):
+        pass
+
+if __name__ == "__main__":
+    index = 6
+    polys = getData(index)
+    FNS(polys)
+
