@@ -146,15 +146,15 @@ class BottomLeftFill(object):
 
 if __name__=='__main__':
 
-    """
+    
     df = pd.read_csv("data/christmas_trees.csv")
     all_polys = []
     for i in range(0,df.shape[0]):
         for j in range(0,df['num'][i]):
             poly=json.loads(df['polygon'][i])
-            GeoFunc.normData(poly,Decimal('1e15'))
+            GeoFunc.normData(poly,1e15)
             all_polys.append(poly)
-    """
+    
 
     nfp_ass=packing.NFPAssistant(all_polys,store_nfp=True,get_all_nfp=True,load_history=False)
     # nfp_ass=packing.NFPAssistant(polys,store_nfp=False,get_all_nfp=True,load_history=True)
