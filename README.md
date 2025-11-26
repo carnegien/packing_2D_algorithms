@@ -10,8 +10,6 @@ Author: Shan Yang (https://github.com/seanys), Zilu Wang (https://github.com/Pri
 
 Email: tjyangshan@gmail.com, prinway1226@gmail.com
 
-Yang works in Dr. Xiaolei Wang's laboratory on optimization problems in urban transportation. Wang works in Dr. Zhaolin Hu's group.
-
 ## Dataset
 
 EURO Dataset: https://www.euro-online.org/websites/esicup/data-sets/#1535972088237-bbcb74e3-b507
@@ -42,38 +40,3 @@ print(all_polys)
 
 Most of them work. A very small overlap is allowed in lp_search to avoid endless search.
 
-## Tutorial
-
-Editing....
-
-## Implementation status
-
-### Core methods
-
-- [x] No-fit Polygon: basic implementation. Start point portion is not fully implemented; see Burke E K, Hellier R S R, Kendall G, et al. "Complete and Robust No-Fit Polygon Generation for the Irregular Stock Cutting Problem" for reference.
-
-### Sequencing / placement methods
-
-- [x] Bottom Left Fill: implemented (see reference papers)
-  a. Select a polygon to insert, compute the inner fit polygon (area where the polygon can be placed without crossing the bin boundary). The reference point P will form a rectangle in the inner fit region; if P is inside the rectangle then the placement is feasible.
-  b. Select the leftmost feasible placement that can be folded (source image: https://github.com/Jack000/SVGnest)
-
-- [x] TOPOS: implemented (see references)
-- [x] GA/SA: both global optimization orders implemented
-
-### Layout-based optimization
-
-- [x] Fast Neighborhood Search: basic implementation; some bugs still need fixing
-- [x] Cuckoo Search: basic implementation; needs further improvements
-- [x] ~~ILSQN: not prepared, not significant~~
-- [x] ~~Guided Local Search: same as above~~
-
-### Linear programming based packing
-
-- [x] Compaction: implemented (shrink borders)
-- [x] Separation: implemented (remove overlaps)
-- [ ] SHAH: Hybrid algorithm based on simulated annealing and the two algorithms above; not yet implemented
-
-## Reference papers
-
-(References list omitted here)
