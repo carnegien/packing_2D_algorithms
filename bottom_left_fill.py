@@ -143,3 +143,23 @@ class BottomLeftFill(object):
         self.contain_length=_max
         return _max
 
+if __name__=='__main__':
+    
+    df = pd.read_csv("data/christmas_trees.csv")
+    all_polys = []
+    
+    for i in range(df.shape[0]):
+      all_polys.append(df['polygon'][i])
+
+    nfp_ass=packing.NFPAssistant(all_polys,store_nfp=True,get_all_nfp=True,load_history=False)
+    # nfp_ass=packing.NFPAssistant(polys,store_nfp=False,get_all_nfp=True,load_history=True)
+    # nfp_ass=packing.NFPAssistant(polys,store_nfp=False,get_all_nfp=False,load_history=False)
+
+    starttime = datetime.datetime.now()
+    # bfl=BottomLeftFill(2000,polys,vertical=False)
+    bfl=BottomLeftFill(760,polys,vertical=False,NFPAssistant=nfp_ass)
+    
+    endtime = datetime.datetime.now()
+    print ("total time: ",endtime - starttime)
+    bfl.showAll()
+
