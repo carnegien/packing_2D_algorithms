@@ -162,7 +162,7 @@ if __name__=='__main__':
 
     starttime = datetime.datetime.now()
     # bfl=BottomLeftFill(2000,polys,vertical=False)
-    bfl=BottomLeftFill(760,polys,vertical=False,NFPAssistant=nfp_ass)
+    bfl=BottomLeftFill(760,all_polys,vertical=False,NFPAssistant=nfp_ass)
     
     endtime = datetime.datetime.now()
     print ("total time: ",endtime - starttime)
