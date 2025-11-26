@@ -167,4 +167,5 @@ if __name__=='__main__':
     endtime = datetime.datetime.now()
     print ("total time: ",endtime - starttime)
     bfl.showAll()
+    return bfl
 
